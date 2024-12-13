@@ -44,6 +44,38 @@
             background-color: #333;
             color: white;
         }
+
+        /* Nueva sección para hacer la tabla responsive */
+        @media screen and (max-width: 800px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 50%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
     </style>
 </head>
 <body>
@@ -54,63 +86,63 @@
         <table>
             <thead>
                 <tr>
-                    <th>Lun</th>
-                    <th>Mar</th>
-                    <th>Mié</th>
-                    <th>Jue</th>
-                    <th>Vie</th>
+                    <th data-label="Lun">Lun</th>
+                    <th data-label="Mar">Mar</th>
+                    <th data-label="Mié">Mié</th>
+                    <th data-label="Jue">Jue</th>
+                    <th data-label="Vie">Vie</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Ejemplo de una semana de un mes -->
                 <tr>
-                    <td>Ciencies Naturals</td>
-                    <td>Català</td>
-                    <td>Ciencies Naturals</td>
-                    <td>Ciencies Socials</td>
-                    <td>Castella</td>
+                    <td data-label="Lun">Ciencies Naturals</td>
+                    <td data-label="Mar">Català</td>
+                    <td data-label="Mié">Ciencies Naturals</td>
+                    <td data-label="Jue">Ciencies Socials</td>
+                    <td data-label="Vie">Castella</td>
                 </tr>
                 <tr>
-                    <td>Angles</td>
-                    <td>E.F</td>
-                    <td>Tecno</td>
-                    <td>Plastica</td>
-                    <td>Català</td>
+                    <td data-label="Lun">Angles</td>
+                    <td data-label="Mar">E.F</td>
+                    <td data-label="Mié">Tecno</td>
+                    <td data-label="Jue">Plastica</td>
+                    <td data-label="Vie">Català</td>
                 </tr>
                 <tr>
-                    <td>Mates</td>
-                    <td>Ciencies Socials</td>
-                    <td>Castella</td>
-                    <td>E.F</td>
-                    <td>Tecno</td>
+                    <td data-label="Lun">Mates</td>
+                    <td data-label="Mar">Ciencies Socials</td>
+                    <td data-label="Mié">Castella</td>
+                    <td data-label="Jue">E.F</td>
+                    <td data-label="Vie">Tecno</td>
                 </tr>
                 <tr>
-                    <td>Pati</td>
-                    <td>Pati</td>
-                    <td>Pati</td>
-                    <td>Pati</td>
-                    <td>Pati</td>
+                    <td data-label="Lun">Pati</td>
+                    <td data-label="Mar">Pati</td>
+                    <td data-label="Mié">Pati</td>
+                    <td data-label="Jue">Pati</td>
+                    <td data-label="Vie">Pati</td>
                 </tr>
                 <tr>
-                    <td>Plastica</td>
-                    <td>Laboratori</td>
-                    <td>Angles</td>
-                    <td>Catala</td>
-                    <td>Mates</td>
+                    <td data-label="Lun">Plastica</td>
+                    <td data-label="Mar">Laboratori</td>
+                    <td data-label="Mié">Angles</td>
+                    <td data-label="Jue">Catala</td>
+                    <td data-label="Vie">Mates</td>
                 </tr>
                 <tr>
-                    <td>Castella</td>
-                    <td>Angles</td>
-                    <td>T.Estudis</td>
-                    <td>Mates</td>
-                    <td>Frances</td>
+                    <td data-label="Lun">Castella</td>
+                    <td data-label="Mar">Angles</td>
+                    <td data-label="Mié">T.Estudis</td>
+                    <td data-label="Jue">Mates</td>
+                    <td data-label="Vie">Frances</td>
                 </tr>
                 <tr>
-                    <td>Ciencies Socials</td>
-                    <td>Mates</td>
-                    <td>Tutoria</td>
-                    <td>Angles</td>
-                    <td>Tutoria</td>
+                    <td data-label="Lun">Ciencies Socials</td>
+                    <td data-label="Mar">Mates</td>
+                    <td data-label="Mié">Tutoria</td>
+                    <td data-label="Jue">Angles</td>
+                    <td data-label="Vie">Tutoria</td>
                 </tr>
             </tbody>
         </table>
